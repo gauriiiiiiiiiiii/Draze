@@ -1,9 +1,7 @@
 # 🎨 DRAZE
-
-> **Where Shapes Take Form**
+Where Shapes Take Form
 
 ---
-
 ## 🌟 Overview
 
 Draze is a cross-platform, interactive geometric drawing application that empowers users to visualize, draw, and manipulate a wide variety of geometric figures. Draze is unique in that it offers both a modern web-based interface (built with React) and a native desktop experience (built with C/GTK), sharing a common design language and feature set. It is designed for students, educators, engineers, and anyone interested in geometry or visual mathematics.
@@ -213,51 +211,4 @@ Draze/
 - **Pride:** Most proud of the seamless, consistent user experience across both web and native platforms.
 
 ---
-
-## 📚 Appendix: Codebase & Data Flow Diagram
-
-```
-flowchart TD
-    User -->|Web| ReactApp
-    User -->|Native| GTKApp
-    ReactApp --> HTML5Canvas
-    ReactApp --> SidebarToolbarBottomBar
-    ReactApp --> StateManagement
-    HTML5Canvas --> FigureDataJSON
-    SidebarToolbarBottomBar --> StateManagement
-    StateManagement --> HTML5Canvas
-    GTKApp --> GTKWindow
-    GTKApp --> SidebarToolbar
-    GTKApp --> CairoCanvas
-    SidebarToolbar --> CairoCanvas
-    GTKWindow --> CairoCanvas
-    CairoCanvas --> FigureStackCStruct
-    FigureStackCStruct --> UndoRedoStack
-    FigureStackCStruct --> ShapeDrawingFunctions
-```
-
----
-
-## 🏁 Getting Started
-
-### Web (React)
-```sh
-npm install
-npm start
-```
-Open [http://localhost:3000](http://localhost:3000)
-
-### Native (C/GTK)
-```sh
-sudo apt install libgtk-3-dev
-make
-./draze
-```
-
----
-
-> **Draze** — Where Shapes Take Form. For questions, feedback, or contributions, please open an issue or pull request!
-
----
-
 
